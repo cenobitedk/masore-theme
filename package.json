@@ -16,7 +16,13 @@
     "url": "https://github.com/cenobitedk/masore-theme/issues"
   },
   "homepage": "https://github.com/cenobitedk/masore-theme#readme",
-  "dependencies": {
-    "normalize.css": "^5.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-postcss": "^0.8.0",
+    "less-plugin-npm-import": "^2.1.0",
+    "normalize.css": "^5.0.0",
+    "postcss-less-engine": "^0.6.2"
   }
 }
