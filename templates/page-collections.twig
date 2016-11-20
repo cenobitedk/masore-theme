@@ -2,20 +2,22 @@
 
 {% block content %}
 	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-
-				<h1 class="article-h1">{{post.title}}</h1>
-
-				{% for collection in fn('masore_get_collections') %}
-					<div class="collection">
-						<a href="{{ fn('get_term_link', collection.term_id, collection.taxonomy) }}">{{ collection.name }}</a>
-					</div>
-				{% else %}
-					No collections found.
-				{% endfor %}
-
-			</section>
-		</article>
+    <div class="row">
+  		{% for collection in fn('masore_get_collections') %}
+        {% set collection = TimberTerm(collection.term_id) %}
+        <div class="three-fifth">
+    			<div class="collection-teaser">
+            <a href="{{ collection.link }}">
+              <div class="img-wrap">
+                <img src="" class="collection-teaser__image">
+              </div>
+            </a>
+    				<a href="{{ collection.link }}" class="collection-teaser__title">{{ collection.title }}</a>
+    			</div>
+        </div>
+  		{% else %}
+  			No collections found.
+  		{% endfor %}
+    </div>
 	</div><!-- /content-wrapper -->
 {% endblock %}
