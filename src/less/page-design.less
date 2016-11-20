@@ -1,0 +1,37 @@
+
+h1,
+p {
+  margin: 0;
+}
+.design {
+  &__collection {
+    font-size: 90%;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: fade(black, 30%);
+  }
+  &__title {
+    font-size: 28px;
+  }
+  &__price {
+    margin-top: @gutter;
+    margin-bottom: @gutter;
+  }
+  &__color-options {
+    margin-top: @gutter;
+    margin-bottom: @gutter;
+  }
+  &__color-option {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+}
+.pagination {
+  margin-top: 2em;
+  .previous-link {
+    text-align: right;
+  }
+}
