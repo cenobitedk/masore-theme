@@ -1,9 +1,5 @@
 {% extends "base.twig" %}
 
-{% block color %}
-  <div class="color-option" style="background-color: {{ post["color_" ~ i] }};"></div>
-{% endblock %}
-
 {% block content %}
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
