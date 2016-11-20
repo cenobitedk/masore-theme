@@ -1,0 +1,33 @@
+// @import (less) "npm://normalize.css/normalize.css";
+@import "fonts";
+@import "grid";
+@import "base";
+@import "colors";
+@import "header";
+@import "nav";
+@import "footer";
+
+@import "page-frontpage";
+@import "page-collection";
+@import "page-collections";
+@import "page-design";
+@import "page-vision";
+
+a {
+  color: @primary;
+}
+.wrapper {
+  padding-left: 2em;
+  padding-right: 2em;
+  // text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.img-wrap {
+  font-size: 0;
+  > img {
+    width: 100%;
+    height: auto;
+  }
+}

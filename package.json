@@ -1,0 +1,28 @@
+{
+  "name": "masore-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cenobitedk/masore-theme.git"
+  },
+  "author": "Jeppe Hasseriis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cenobitedk/masore-theme/issues"
+  },
+  "homepage": "https://github.com/cenobitedk/masore-theme#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-postcss": "^0.8.0",
+    "less-plugin-npm-import": "^2.1.0",
+    "normalize.css": "^5.0.0",
+    "postcss-less-engine": "^0.6.2"
+  }
+}

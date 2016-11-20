@@ -1,0 +1,9 @@
+{% extends "base.twig" %}
+
+{% set body_class = body_class ~ " about" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		{{post.content}}
+	</div><!-- /content-wrapper -->
+{% endblock %}

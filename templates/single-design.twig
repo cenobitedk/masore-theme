@@ -1,0 +1,49 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="design">
+        <div class="row">
+          <div class="one-third">
+            <div class="img-wrap">
+              <img src="{{ TimberImage(post.image_1).src('large') }}">
+            </div>
+          </div>
+          {% if post.image_2 is not empty %}
+          <div class="one-third">
+            <div class="img-wrap">
+              <img src="{{ TimberImage(post.image_2).src('large') }}">
+            </div>
+          </div>
+          {% endif %}
+          <div class="one-third">
+            <div class="design__collection">{{ fn('masore_get_post_collection', post.id).name }}</div>
+            <h1 class="design__title">{{post.title}}</h1>
+            <div class="design__price">
+              <div class="label">Price:</div>
+              <div>€{{ post.price }}</div>
+            </div>
+            <div class="design__color-options">
+              <div class="label">Colors:</div>
+              {% for i in 1..post.color_options %}
+              <div class="design__color-option" style="background-color: {{ attribute(post, "color_" ~ i) }};"></div>
+              {% endfor %}
+            </div>
+            <p>{{ post.description }}</p>
+          </div>
+        </div>
+			</section>
+		</article>
+    <div class="pagination">
+      <div class="row">
+        <div class="one-third previous-link">
+          {{ fn('next_post_link', '<< %link', '%title', true, '', 'collection') }}
+        </div>
+        <div class="one-third next-link">
+          {{ fn('previous_post_link', '%link >>', '%title', true, '', 'collection') }}
+        </div>
+      </div>
+    </div
+	</div><!-- /content-wrapper -->
+{% endblock %}
