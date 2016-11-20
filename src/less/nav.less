@@ -8,7 +8,7 @@
   }
   li {
     display: inline-block;
-    margin: 0 1em;
+    margin: 0.3em 1em;
     position: relative;
     li {
       margin: 0;
@@ -31,18 +31,20 @@
       padding: 2px 5px;
       text-align: left;
       line-height: 1.5;
-      background-color: fade(white, 60%);
+      background-color: fade(white, 70%);
       border-radius: 2px;
       transform: translateY(5px);
     }
-    &:hover,
-    &:focus {
-      ul {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-        transition-duration: 1s;
-        transition-delay: 0.3s;
+    @media (min-width: 560px) {
+      &:hover,
+      &:focus {
+        ul {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+          transition-duration: 1s;
+          transition-delay: 0.3s;
+        }
       }
     }
   }
