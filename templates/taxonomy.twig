@@ -1,14 +1,25 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">TAXONOMY {{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
-		</article>
+  <div class="content-wrapper">
+    <div class="collection__lead">Collection</div>
+    <h1 class="collection__title">{{ term.name }}</h1>
+    <div class="row">
+      {% for post in posts %}
+      <!-- <pre>{{ dump(post) }}</pre> -->
+      <div class="one-fourth">
+        <div class="design-teaser">
+          <a href="{{ post.link }}">
+            <div class="img-wrap">
+              <img src="{{ TimberImage(post.image_1).src(medium) }}" alt="Image for {{post.title}}">
+            </div>
+          </a>
+          <a href="{{ post.link }}" class="design-teaser__title">{{ post.name }}</a>
+        </div>
+      </div>
+      {% else %}
+      <span>No designs</span>
+      {% endfor %}
+    </div>
 	</div><!-- /content-wrapper -->
 {% endblock %}
