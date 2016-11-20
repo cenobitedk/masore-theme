@@ -25,4 +25,4 @@ $context = Timber::get_context();
 $term = new TimberTerm();
 $context['term'] = $term;
 $context['collections'] = Timber::get_terms('collection');
-Timber::render( array( 'taxonomy-' . $post->post_name . '.twig', 'taxonomy.twig' ), $context );
+Timber::render( array( 'taxonomy-' . $term->taxonomy . '.twig', 'taxonomy.twig' ), $context );
