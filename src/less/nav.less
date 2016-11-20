@@ -12,8 +12,10 @@
     position: relative;
     li {
       margin: 0;
+      white-space: nowrap;
       &:before {
-        content: "– ";
+        content: "+ ";
+        color: fade(black, 50%);
       }
       a {
         border: none;
@@ -25,14 +27,20 @@
       opacity: 0;
       transition: all 0.7s;
       font-size: 12px;
-      padding-left: 5px;
-      white-space: nowrap;
+      margin-top: 2px;
+      padding: 2px 5px;
+      text-align: left;
+      line-height: 1.5;
+      background-color: fade(white, 60%);
+      border-radius: 2px;
+      transform: translateY(5px);
     }
     &:hover,
     &:focus {
       ul {
         visibility: visible;
         opacity: 1;
+        transform: translateY(0);
         transition-duration: 1s;
         transition-delay: 0.3s;
       }
@@ -54,5 +62,8 @@
       border-color: fade(black, 80%);
       transform: scale(1.05, 1.05);
     }
+  }
+  .current-menu-item a {
+    border-color: fade(black, 40%);
   }
 }
