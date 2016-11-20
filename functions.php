@@ -14,6 +14,10 @@ function masore_get_collections() {
 	return $collections;
 }
 
+function masore_get_post_collection($id) {
+  return wp_get_object_terms($id, 'collection')[0];
+}
+
 function masore_theme_enqueue_styles() {
   $theme = wp_get_theme('masore-theme');
   wp_enqueue_style('masore-style', get_stylesheet_directory_uri() . '/assets/main.css', array(), $theme->get('Version'));
