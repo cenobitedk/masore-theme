@@ -3,6 +3,7 @@
 {% block content %}
 	<div class="content-wrapper">
 		<div class="frontpage">
+      {{post.content}}
       <div class="img-wrap">
         <img src="{{post.thumbnail.src|resize(1000)}}" class="frontpage__image" title="{{ post.thumbnail.caption }}" alt="Image for {{post.title}}" />
       </div>
