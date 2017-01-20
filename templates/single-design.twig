@@ -27,7 +27,7 @@
             <div class="design__color-options">
               <div class="label">Colors:</div>
               {% for i in 1..post.color_options %}
-              <div class="design__color-option" style="background-color: {{ attribute(post, "color_" ~ i) }};"></div>
+              <div class="design__color-option" title="{{ attribute(post, "color_" ~ i ~ "_name")|trim }}" style="background-color: {{ attribute(post, "color_" ~ i) }};"></div>
               {% endfor %}
             </div>
             <p>{{ post.description }}</p>
