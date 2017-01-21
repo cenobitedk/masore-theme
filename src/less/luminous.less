@@ -1,0 +1,67 @@
+.lum-lightbox {
+  background-color: fade(white, 90%);
+}
+
+.lum-lightbox-inner {
+  img {
+    max-height: calc(100% - 2em);
+    box-shadow: 0 0 5em fade(black, 20%);
+  }
+}
+
+@keyframes lum-fade {
+  0% { zoom: 1; opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.lum-lightbox.lum-open {
+  display: block;
+}
+
+.lum-lightbox.lum-opening {
+  animation: lum-fade 200ms;
+}
+.lum-lightbox.lum-closing {
+  animation: lum-fade 200ms reverse;
+}
+
+.lum-lightbox-loader {
+  display: none;
+}
+
+.lum-gallery-button {
+  position: absolute;
+  top: calc(50% - 3em);
+  height: 6em;
+  width: 6em;
+  background: none;
+  border-width: 3px 0 0 3px;
+  border-color: black transparent transparent black;
+  border-style: solid;
+  text-indent: -9999px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.4;
+  transition: opacity .5s, transform .3s;
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
+.lum-previous-button {
+  left: 2em;
+  transform: scale(0.9) rotate(-45deg);
+  &:hover,
+  &:active {
+    transform: scale(0.95) rotate(-45deg);
+  }
+}
+.lum-next-button {
+  right: 2em;
+  transform: scale(0.9) rotate(135deg);
+  &:hover,
+  &:active {
+    transform: scale(0.95) rotate(135deg);
+  }
+}
