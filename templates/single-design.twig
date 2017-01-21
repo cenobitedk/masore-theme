@@ -6,15 +6,19 @@
 			<section class="design">
         <div class="row">
           <div class="one-third">
-            <div class="img-wrap">
-              <img src="{{ TimberImage(post.image_1).src('large') }}">
-            </div>
+            <a href="{{ TimberImage(post.image_1).src|resize(0, 1000) }}" class="image image-gallery">
+              <div class="img-wrap">
+                <img src="{{ TimberImage(post.image_1).src('large') }}">
+              </div>
+            </a>
           </div>
           {% if post.image_2 is not empty %}
           <div class="one-third">
-            <div class="img-wrap">
-              <img src="{{ TimberImage(post.image_2).src('large') }}">
-            </div>
+            <a href="{{ TimberImage(post.image_2).src|resize(0, 1000) }}" class="image image-gallery">
+              <div class="img-wrap">
+                <img src="{{ TimberImage(post.image_2).src('large') }}">
+              </div>
+            </a>
           </div>
           {% endif %}
           <div class="one-third">
