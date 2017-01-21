@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify ./src/js/main.js > ./assets/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,12 @@
   "homepage": "https://github.com/cenobitedk/masore-theme#readme",
   "dependencies": {},
   "devDependencies": {
+    "browserify": "^13.3.0",
     "grunt": "^1.0.1",
     "grunt-contrib-less": "^1.4.0",
     "grunt-postcss": "^0.8.0",
     "less-plugin-npm-import": "^2.1.0",
+    "luminous-lightbox": "^1.0.1",
     "normalize.css": "^5.0.0",
     "postcss-less-engine": "^0.6.2"
   }
