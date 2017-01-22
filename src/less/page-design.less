@@ -19,10 +19,14 @@
   }
   &__color-option {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 1px solid black;
+    &:not([data-href=""]) {
+      cursor: -webkit-zoom-in;
+      cursor: zoom-in;
+    }
   }
 }
 .pagination {

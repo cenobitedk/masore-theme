@@ -90,13 +90,35 @@
   }
 }
 
-.sm, .md, .lg {
-  &-full-width {
-    & + & {
+// .sm, .md, .lg {
+//   &-full-width {
+//     & + & {
+//       margin-top: 0.6em;
+//       @media (min-width: @tablet) {
+//         margin-top: 1em;
+//       }
+//     }
+//   }
+// }
+
+.sm-full-width {
+  & + & {
+    @media (max-width: @mobile-max) {
       margin-top: 0.6em;
-      @media (min-width: @tablet) {
-        margin-top: 1em;
-      }
+    }
+  }
+}
+.md-full-width {
+  & + & {
+    @media (min-width: @tablet) and (max-width: @tablet-max) {
+      margin-top: 1em;
+    }
+  }
+}
+.lg-full-width {
+  & + & {
+    @media (min-width: @desktop) {
+      margin-top: 1em;
     }
   }
 }
