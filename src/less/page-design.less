@@ -19,10 +19,15 @@
   }
   &__color-option {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    width: 3em;
+    height: 3em;
     border: 1px solid black;
+    background-position: center;
+    background-size: 150%;
+    a& {
+      cursor: -webkit-zoom-in;
+      cursor: zoom-in;
+    }
   }
 }
 .pagination {
