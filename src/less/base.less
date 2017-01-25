@@ -5,12 +5,27 @@ body {
   box-sizing: border-box;
   margin: 0;
   min-height: 100%;
-  border: 15px solid fade(black, 85%);
+  border: 0.6em solid fade(black, 85%);
   font-family: 'tuliaRegular', sans-serif;
   background-color: #fdfdfd;
   background-image: url(img/bg-white-noise-1.jpg);
   background-repeat: repeat;
+
+  @media (min-width: @tablet) {
+    border-width: 1em;
+  }
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'tuliaBold', "arial black";
+}
+
+.wrapper {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  max-width: 1000px;
+  margin: 0 auto;
+  @media (min-width: @tablet) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }

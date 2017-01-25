@@ -1,9 +1,13 @@
 header {
   text-align: center;
   .logo {
-    margin-top: 2em;
+    margin-top: 1em;
+    @media (min-width: @tablet) {
+      margin-top: 2em;
+    }
     img {
       width: 300px;
+      max-width: 80%;
       height: auto;
       transition: all 2s;
       &:hover,

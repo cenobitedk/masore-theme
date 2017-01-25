@@ -7,7 +7,7 @@
 			<div class="collection-teaser">
         <a href="{{ collection.link }}">
           <div class="img-wrap">
-            <img src="" class="collection-teaser__image">
+            <img src="{{ TimberImage(collection.image).src('large') }}" class="collection-teaser__image">
           </div>
         </a>
 				<a href="{{ collection.link }}" class="collection-teaser__title">{{ collection.title }}</a>

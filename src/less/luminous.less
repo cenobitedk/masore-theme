@@ -1,0 +1,82 @@
+.lum-lightbox {
+  background-color: fade(white, 90%);
+}
+
+.lum-lightbox-inner {
+  img {
+    max-height: calc(~"100% - 2em");
+    box-shadow: 0 0 5em fade(black, 40%);
+  }
+}
+
+@keyframes lum-fade {
+  0% { zoom: 1; opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.lum-lightbox.lum-open {
+  display: block;
+}
+
+.lum-lightbox.lum-opening {
+  animation: lum-fade 200ms;
+}
+.lum-lightbox.lum-closing {
+  animation: lum-fade 200ms reverse;
+}
+
+.lum-lightbox-loader {
+  display: block;
+}
+
+.lum-gallery-button {
+  position: absolute;
+  top: calc(~"50% - 1.5em");
+  height: 3em;
+  width: 3em;
+  background: none;
+  border-width: 2px 0 0 2px;
+  border-color: black transparent transparent black;
+  border-style: solid;
+  text-indent: -9999px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.5;
+  transition: opacity .5s, transform 1s;
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+  @media (min-width: @tablet) {
+    top: calc(~"50% - 3em");
+    height: 6em;
+    width: 6em;
+  }
+}
+.lum-previous-button {
+  left: 2em;
+  transform: scale(0.9) rotate(-45deg);
+  &:hover,
+  &:active {
+    transform: scale(0.95) rotate(-45deg);
+  }
+  @media (min-width: @tablet) {
+    left: 4em;
+  }
+}
+.lum-next-button {
+  right: 2em;
+  transform: scale(0.9) rotate(135deg);
+  &:hover,
+  &:active {
+    transform: scale(0.95) rotate(135deg);
+  }
+  @media (min-width: @tablet) {
+    right: 4em;
+  }
+}
+
+.lum-lightbox-caption {
+  margin: 0;
+}

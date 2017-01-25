@@ -5,19 +5,23 @@
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<section class="design">
         <div class="row">
-          <div class="one-third">
-            <div class="img-wrap">
-              <img src="{{ TimberImage(post.image_1).src('large') }}">
-            </div>
+          <div class="sm-full-width md-one-third">
+            <a href="{{ TimberImage(post.image_1).src|resize(0, 1500) }}" class="image image-gallery">
+              <div class="img-wrap">
+                <img src="{{ TimberImage(post.image_1).src('large') }}">
+              </div>
+            </a>
           </div>
           {% if post.image_2 is not empty %}
-          <div class="one-third">
-            <div class="img-wrap">
-              <img src="{{ TimberImage(post.image_2).src('large') }}">
-            </div>
+          <div class="sm-full-width md-one-third">
+            <a href="{{ TimberImage(post.image_2).src|resize(0, 1500) }}" class="image image-gallery">
+              <div class="img-wrap">
+                <img src="{{ TimberImage(post.image_2).src('large') }}">
+              </div>
+            </a>
           </div>
           {% endif %}
-          <div class="one-third">
+          <div class="sm-full-width md-one-third">
             <div class="design__collection">{{ fn('masore_get_post_collection', post.id).name }}</div>
             <h1 class="design__title">{{post.title}}</h1>
             <div class="design__price">
@@ -27,7 +31,14 @@
             <div class="design__color-options">
               <div class="label">Colors:</div>
               {% for i in 1..post.color_options %}
-              <div class="design__color-option" style="background-color: {{ attribute(post, "color_" ~ i) }};"></div>
+              {% if attribute(post, "color_" ~ i ~ "_fabric") is not empty %}
+                <a href="{{ TimberImage(attribute(post, "color_" ~ i ~ "_fabric")).src('large') }}"
+                   class="design__color-option image-fabric" title="{{ attribute(post, "color_" ~ i ~ "_name")|trim }}"
+                   style="background-color: {{ attribute(post, "color_" ~ i) }}; background-image: url({{ TimberImage(attribute(post, "color_" ~ i ~ "_fabric")).src|resize(100) }});"></a>
+              {% else %}
+                <div class="design__color-option" title="{{ attribute(post, "color_" ~ i ~ "_name")|trim }}"
+                     style="background-color: {{ attribute(post, "color_" ~ i) }};"></div>
+              {% endif %}
               {% endfor %}
             </div>
             <p>{{ post.description }}</p>
@@ -37,10 +48,10 @@
 		</article>
     <div class="pagination">
       <div class="row">
-        <div class="one-third previous-link">
+        <div class="sm-one-half previous-link">
           {{ fn('next_post_link', '<< %link', '%title', true, '', 'collection') }}
         </div>
-        <div class="one-third next-link">
+        <div class="sm-one-half next-link">
           {{ fn('previous_post_link', '%link >>', '%title', true, '', 'collection') }}
         </div>
       </div>
