@@ -31,7 +31,14 @@
             <div class="design__color-options">
               <div class="label">Colors:</div>
               {% for i in 1..post.color_options %}
-              <div data-href="{{ TimberImage(attribute(post, "color_" ~ i ~ "_fabric")).src('large') }}" class="design__color-option image-fabric" title="{{ attribute(post, "color_" ~ i ~ "_name")|trim }}" style="background-color: {{ attribute(post, "color_" ~ i) }}; background-image: url({{ TimberImage(attribute(post, "color_" ~ i ~ "_fabric")).src|resize(100) }}); "></div>
+              {% if attribute(post, "color_" ~ i ~ "_fabric") is not empty %}
+                <a href="{{ TimberImage(attribute(post, "color_" ~ i ~ "_fabric")).src('large') }}"
+                   class="design__color-option image-fabric" title="{{ attribute(post, "color_" ~ i ~ "_name")|trim }}"
+                   style="background-color: {{ attribute(post, "color_" ~ i) }}; background-image: url({{ TimberImage(attribute(post, "color_" ~ i ~ "_fabric")).src|resize(100) }});"></a>
+              {% else %}
+                <div class="design__color-option" title="{{ attribute(post, "color_" ~ i ~ "_name")|trim }}"
+                     style="background-color: {{ attribute(post, "color_" ~ i) }};"></div>
+              {% endif %}
               {% endfor %}
             </div>
             <p>{{ post.description }}</p>
