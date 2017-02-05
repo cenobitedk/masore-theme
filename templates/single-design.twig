@@ -41,7 +41,7 @@
               {% endif %}
               {% endfor %}
             </div>
-            <p>{{ post.description }}</p>
+            <p>{{ post.description|wpautop }}</p>
             <p>Buy item please contact via email: <a href="mailto:contact@masore.com?subject={{post.title}}">contact@masore.com</a></p>
           </div>
         </div>
