@@ -1,0 +1,1 @@
+Copy this folder to the web root, so it's accessible at website.url/icons/.
