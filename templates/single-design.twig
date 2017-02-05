@@ -48,11 +48,20 @@
 		</article>
     <div class="pagination">
       <div class="row">
+        {% set links = fn('masore_adjacent_designs') %}
         <div class="sm-one-half previous-link">
-          {{ fn('next_post_link', '<< %link', '%title', true, '', 'collection') }}
+          {% if links.prev is not empty %}
+            <span>&lt;&lt; <a href="{{ links.prev.link }}" rel="prev">{{ links.prev.post_title }}</a></span>
+          {% else %}
+            <span class="inactive">&lt;&lt; previous</span>
+          {% endif %}
         </div>
         <div class="sm-one-half next-link">
-          {{ fn('previous_post_link', '%link >>', '%title', true, '', 'collection') }}
+          {% if links.next is not empty %}
+            <span><a href="{{ links.next.link }}" rel="next">{{ links.next.post_title }}</a> &gt;&gt;</span>
+          {% else %}
+            <span class="inactive">next &gt;&gt;</span>
+          {% endif %}
         </div>
       </div>
     </div

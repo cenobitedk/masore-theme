@@ -17,21 +17,25 @@
   > * {
     .border-box;
     min-height: 1px;
-    padding-left: @gutter / 2;
-    padding-right: @gutter / 2;
     display: inline-block;
     text-align: left;
     vertical-align: top;
     font-size: initial;
+    padding: 0.6em / 2;
+    @media (min-width: @tablet) {
+      padding: 1em / 2;
+    }
   }
 }
 .row {
   .row;
   .clearfix;
-  margin-left: -@gutter / 2;
-  margin-right: -@gutter / 2;
   text-align: center;
   font-size: 0;
+  margin: -0.6em / 2;
+  @media (min-width: @tablet) {
+    margin: -1em / 2;
+  }
 }
 
 .grid-widths() {
@@ -89,17 +93,6 @@
     .grid-widths;
   }
 }
-
-// .sm, .md, .lg {
-//   &-full-width {
-//     & + & {
-//       margin-top: 0.6em;
-//       @media (min-width: @tablet) {
-//         margin-top: 1em;
-//       }
-//     }
-//   }
-// }
 
 .sm-full-width {
   & + & {
