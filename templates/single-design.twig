@@ -51,16 +51,16 @@
         {% set links = fn('masore_adjacent_designs') %}
         <div class="sm-one-half previous-link">
           {% if links.prev is not empty %}
-            <span><< <a href="{{ links.prev.link }}" rel="prev">{{ links.prev.post_title }}</a></span>
+            <span>&lt;&lt; <a href="{{ links.prev.link }}" rel="prev">{{ links.prev.post_title }}</a></span>
           {% else %}
-            <span class="inactive"><< previous</span>
+            <span class="inactive">&lt;&lt; previous</span>
           {% endif %}
         </div>
         <div class="sm-one-half next-link">
           {% if links.next is not empty %}
-            <span><a href="{{ links.next.link }}" rel="next">{{ links.next.post_title }}</a> >></span>
+            <span><a href="{{ links.next.link }}" rel="next">{{ links.next.post_title }}</a> &gt;&gt;</span>
           {% else %}
-            <span class="inactive">next >></span>
+            <span class="inactive">next &gt;&gt;</span>
           {% endif %}
         </div>
       </div>
