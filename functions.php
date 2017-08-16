@@ -9,6 +9,7 @@ function masore_get_collections() {
 			'parent'   => 0,
 			'hide_empty' => false,
 			'orderby' => 'term_id',
+      'order' => 'DESC'
 		));
 	}
 	return $collections;
