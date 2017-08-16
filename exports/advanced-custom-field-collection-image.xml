@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.6.1" created="2017-01-20 22:35" -->
+<!-- generator="WordPress/4.7.5" created="2017-08-16 20:19" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -27,21 +27,22 @@
 
 <channel>
 	<title>MASORÉ</title>
-	<link>http://masore.dev:8000</link>
+	<link>http://www.masore.com</link>
 	<description></description>
-	<pubDate>Fri, 20 Jan 2017 22:35:04 +0000</pubDate>
+	<pubDate>Wed, 16 Aug 2017 20:19:34 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
-	<wp:base_site_url>http://masore.dev:8000/wp</wp:base_site_url>
-	<wp:base_blog_url>http://masore.dev:8000</wp:base_blog_url>
+	<wp:base_site_url>http://www.masore.com</wp:base_site_url>
+	<wp:base_blog_url>http://www.masore.com</wp:base_blog_url>
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login>admin</wp:author_login><wp:author_email>j.hasseriis@gmail.com</wp:author_email><wp:author_display_name><![CDATA[admin]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>2</wp:author_id><wp:author_login>marianne</wp:author_login><wp:author_email>contact@masore.com</wp:author_email><wp:author_display_name><![CDATA[Marianne Rosendal]]></wp:author_display_name><wp:author_first_name><![CDATA[Marianne]]></wp:author_first_name><wp:author_last_name><![CDATA[Rosendal]]></wp:author_last_name></wp:author>
 	<item>
 		<title>Collection Image</title>
-		<link>http://masore.dev:8000/?acf=acf_collection-image</link>
+		<link>http://www.masore.com/?acf=acf_collection-image</link>
 		<pubDate>Fri, 20 Jan 2017 22:26:47 +0000</pubDate>
 		<dc:creator>admin</dc:creator>
 		<guid isPermaLink="false">http://masore.dev:8000/?post_type=acf&#038;p=66</guid>
-		<wp:post_id>66</wp:post_id>
+		<wp:post_id>85</wp:post_id>
 		<wp:post_date>2017-01-20 23:26:47</wp:post_date>
 		<wp:post_date_gmt>2017-01-20 22:26:47</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
@@ -53,28 +54,28 @@
 		<wp:post_type>acf</wp:post_type>
 		<wp:post_password></wp:post_password>
 		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>field_58828e45a71f0</wp:meta_key>
 			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_58828e45a71f0";s:5:"label";s:5:"Image";s:4:"name";s:5:"image";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:11:"ef_taxonomy";s:8:"operator";s:2:"==";s:5:"value";s:10:"collection";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>hide_on_screen</wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:11:"ef_taxonomy";s:8:"operator";s:2:"==";s:5:"value";s:10:"collection";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>
