@@ -9,6 +9,7 @@ function masore_get_collections() {
 			'parent'   => 0,
 			'hide_empty' => false,
 			'orderby' => 'term_id',
+      'order' => 'DESC'
 		));
 	}
 	return $collections;
@@ -43,13 +44,21 @@ function masore_adjacent_post_link($output, $format, $link, $post, $adjacent) {
   }
 }
 
-function masore_adjacent_designs() {
-  $current = get_the_ID();
+function masore_adjacent_designs($post, $collection) {
+  $current = $post->id;
   $return = (object)[];
   $args = array(
     'post_type' => 'design',
     'orderby' => 'meta_value_num',
     'meta_key' => 'number',
+    'tax_query' => array(
+        array (
+            'taxonomy' => 'collection',
+            'field' => 'term_id',
+            'terms' => $collection->term_id,
+            'include_children' => false
+        )
+    ),
     'order' => 'ASC',
     'cache_results' => true
   );
