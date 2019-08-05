@@ -6,7 +6,7 @@
   <div class="content-wrapper">
     {{post.content}}
     <div class="img-wrap">
-      <img src="{{post.thumbnail.src|resize(1000)}}" class="frontpage__image" title="{{ post.thumbnail.caption }}" alt="Image for {{post.title}}"/>
+      <img src="{{TimberImage(post.thumbnail).src('large')}}" class="frontpage__image" title="{{ post.thumbnail.caption }}" alt="Image for {{post.title}}"/>
     </div>
   </div>
 {% endblock %}
