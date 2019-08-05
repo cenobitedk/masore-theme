@@ -21,7 +21,7 @@ function masore_get_post_collection($id) {
 
 function masore_filter_collection_query($query) {
   // Modify query for displaying designs in a collection, sorted by custom field.
-  if(is_tax('collection') && !is_admin() && is_main_query()) {
+  if(is_tax('collection') && !is_admin() && $query->is_main_query()) {
     $query->set('posts_per_page', '50');
     $query->set('orderby', 'meta_value_num');
     $query->set('meta_key', 'number');
