@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify ./src/js/main.js > ./assets/bundle.js"
+    "build:js": "browserify ./src/js/main.js > ./assets/bundle.js",
+    "build:css": "grunt",
+    "build": "npm run build:js && npm run build:css"
   },
   "repository": {
     "type": "git",
