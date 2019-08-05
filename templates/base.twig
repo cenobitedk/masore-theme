@@ -10,10 +10,10 @@
 		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
-          <div class="logo">
+          			<div class="logo">
 						<a class="hdr-logo-link" href="{{site.url}}" rel="home" title="{{site.name}}">
-              <img alt="{{site.name}}" src="{{ theme.link }}/assets/img/masore-uc.svg">
-            </a>
+							<img alt="{{site.name}}" src="{{ theme.link }}/assets/img/masore-uc.svg">
+						</a>
 					</div>
 					<nav id="nav-main" class="nav-main" role="navigation">
 						{% include "menu.twig" with {'menu': menu.get_items} %}
@@ -21,20 +21,22 @@
 				</div>
 			{% endblock %}
 		</header>
-
-		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</section>
+		
+		{% block main %}
+			<section id="content" role="main" class="content-wrapper">
+				{% if title %}<h1>{{title}}</h1>{% endif %}
+				<div class="wrapper {{sidebar_class}}">
+					{% block content %}
+						Sorry, no content
+					{% endblock %}
+				</div>
+				{% if sidebar %}
+					<aside class="layout-sidebar">
+						{{sidebar}}
+					</aside>
+				{% endif %}
+			</section>
+		{% endblock %}
 
 		{% block footer %}
 			<footer id="footer">
