@@ -1,6 +1,6 @@
 {% extends "base.twig" %}
 
-{% set body_class = body_class ~ " frontpage" %}
+{% set body_class = [body_class, post.title|lower]|join(' ') %}
 
 {% block content %}
   <div class="content-wrapper">
