@@ -647,7 +647,7 @@ var fabric_images = document.querySelectorAll('.image-fabric');
 var fabric_gallery = new LuminousGallery(fabric_images);
 
 var $ = document.querySelector.bind(document);
-if ($('body.frontpage')) {
+if ($('.media-wrap')) {
     var v = $('#video');
     var m = $('.mute');
     var a = $('.audio');
