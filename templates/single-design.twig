@@ -9,7 +9,7 @@
           <div class="sm-full-width md-one-third">
             <a href="{{ TimberImage(post.image_1).src|resize(0, 1500) }}" class="image image-gallery">
               <div class="img-wrap">
-                <img src="{{ TimberImage(post.image_1).src('large') }}">
+                <img src="{{ TimberImage(post.image_1).src('large') }}" alt="{{post.title}}">
               </div>
             </a>
           </div>
@@ -17,7 +17,7 @@
           <div class="sm-full-width md-one-third">
             <a href="{{ TimberImage(post.image_2).src|resize(0, 1500) }}" class="image image-gallery">
               <div class="img-wrap">
-                <img src="{{ TimberImage(post.image_2).src('large') }}">
+                <img src="{{ TimberImage(post.image_2).src('large') }}" alt="{{post.title}}>
               </div>
             </a>
           </div>

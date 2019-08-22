@@ -12,7 +12,9 @@
         <div class="design-teaser">
           <a href="{{ post.link }}">
             <div class="img-wrap">
-              <img src="{{ TimberImage(post.image_1).src('large') }}" alt="Image for {{post.title}}">
+              <img
+                src="{{ TimberImage(post.image_1).src('large')|resize(400) }}"
+                alt="Image for {{post.title}}">
             </div>
           </a>
           <a href="{{ post.link }}" class="design-teaser__title">{{ post.name }}</a>
